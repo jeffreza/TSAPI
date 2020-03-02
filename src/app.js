@@ -1,1 +1,5 @@
-console.log("jeff");
+var person = {
+    name: "jeff",
+    age: 30
+};
+console.log(person.name);
