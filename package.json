@@ -4,9 +4,11 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "@types/node": "^13.9.0",
     "ampq": "^2019.5.11",
     "amqplib": "^0.5.5",
     "express": "^4.17.1",
+    "http": "0.0.0",
     "node": "^13.8.0",
     "rabbitmq": "0.0.2"
   },
