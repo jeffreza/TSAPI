@@ -1,12 +1,15 @@
-import { Person } from "./person";
-import { addListener } from "cluster";
+this.router.post('/UpadateApplication', async (req, res) => {
+    let newApplication: IAPPLICATIONS = req.body.Application;
+    let response = await new ApplicationBuss().updateApplication(newApplication);
+    // here delete submission function should also run
+    // update application changes the status of application from active to pending
 
-function hello(person:Person): string{
-
-    return 'hello, ${person.firstName}, ${person.firstName} ';
-
-}
-
-let person: Person = {firstName:"ali", lastName:"raza"};
-
-console.log(hello(person));
+    if (response === null) {
+        res.send('Some thing Went Wrong');
+    } else {
+        
+        res.status(200).json({
+            response,
+        });
+    }
+});

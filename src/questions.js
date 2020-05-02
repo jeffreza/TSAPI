@@ -1,6 +1,5 @@
 console.log("what is your name?");
-process.stdin.once("data", chunk => {
-    let name = chunk.toString();
-    console.log("hello!" + name + "!");
-  });
-  
+process.stdin.once("data", (chunk) => {
+  let name = chunk.toString().trim();
+  console.log("hello!"+ "    "+ name + "!");
+});
