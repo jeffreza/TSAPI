@@ -1,4 +1,4 @@
-"use strict";
+/* "use strict";
 exports.__esModule = true;
 var Student = /** @class */ (function () {
     function Student(firstName, middleInitial, lastName) {
@@ -17,3 +17,4 @@ var Student = /** @class */ (function () {
     return Student;
 }());
 exports.Student = Student;
+ */

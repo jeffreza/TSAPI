@@ -14,3 +14,5 @@ console.log(person.hobby);
 for(const hobbies of person.hobby){
     console.log(hobbies);
 }
+
+

@@ -1,8 +1,7 @@
-this.router.post('/UpadateApplication', async (req, res) => {
+this.router.post('/UpadateApplication', async (req, res,next) => {
 
     try {
         
-
         let newApplication: IAPPLICATIONS = req.body.Application;
         let subWidrawnID: string = req.body.Application.SubmissionId;
         let updatedApplication = await new ApplicationBuss().updateApplication(newApplication);
@@ -26,7 +25,9 @@ this.router.post('/UpadateApplication', async (req, res) => {
 
     } catch (error) {
 
-        console.log(error)
+        res.status(503).json({
+            error: error,
+        });
 
     }
 });
